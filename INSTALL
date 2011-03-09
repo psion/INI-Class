@@ -1,0 +1,18 @@
+Installation of INI-Class is simple.  Just put the one and only PHP file in the directory
+that you have your program in.  If you want to use it for more than just one script, put
+it in your include directory.  Then from there, you can call it as a class.
+
+Class Name: parseINI(ini file name)
+
+Functions:
+
+parseArray(array[optional) -   Pass an array in the correct structure and it will structure
+                               it into an INI file string.  If none is given, then the basic
+                               array from the class would be parsed.
+parseString(string[optional) - Pass an INI file as a string through here and it will parse
+										 it into an array.  If none is given, the INI file passed 
+										 when the class was called will be parsed.
+saveINI(string[optional]) -	 This will save the INI string.  If no string is passed, then
+										 it will save the original INI string.
+										 
+The array structure is listed in the README file.  It should be easy from there.
