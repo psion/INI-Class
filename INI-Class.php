@@ -82,12 +82,14 @@ if(is_file($file))
 		$re2='(\\[.*?\\])';	# Square Braces 1
 		$re3='.*?';	# Non-greedy match on filler
 		$re4='((?:[a-z][a-z]+))';	# Word 1
+
 		foreach($jones as $txt)
 		{
 			 if (!$c=preg_match_all ("/".$re1."/is", $txt, $matches))
 			 {
 			 	if ($c=preg_match_all ("/".$re2."/is", $txt, $matches))
 			 	{
+			 		$c=preg_match_all ("/".$re3.$re4."/is", $txt, $matches);			 		
 			 		$section=$matches[1][0];
 			 		$this->ini_array[$section]=array();
 			 		}
