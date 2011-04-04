@@ -27,15 +27,8 @@ class parseINI
 	public $ini_array;	// The INI broken down into an array
 	
 	
-	/*function __construct($file)
-	{
-		if(is_file($file))
-		{  $this->ini_file=fopen($file,'r+b');
-		   $this->ini=fread($this->ini_file,filesize($file));
-		   } else { $this->ini_file=fopen($file,'w+b'); }
-		   } 
-		   
-		   I don't know what I need here.  I might rewrite the construct function, just
+	/*
+	      I might rewrite the construct function, just
 		   not right now.  When I do, it will be to something that won't have to rewrite
 		   the damn INI file each time.  Next time, I guess. */
 		   
@@ -85,7 +78,7 @@ if(is_file($file))
 
 		foreach($jones as $txt)
 		{
-			 if (!$c=preg_match_all ("/".$re1."/is", $txt, $matches))
+			 if ((!$c=preg_match_all ("/".$re1."/is", $txt, $matches))OR(!$c=preg_match_all ("/(;)/is", $txt, $matches)))
 			 {
 			 	if ($c=preg_match_all ("/".$re2."/is", $txt, $matches))
 			 	{
