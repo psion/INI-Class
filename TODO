@@ -1,8 +1,6 @@
 To Do List
 
-1.  The construct function is not exactly to my liking.  It rewrites the INI file
-    the moment it reads it in.  I don't like that.  When I get the chance, I'm going
-    to rewrite it to NOT do this.
-2.  I don't know any thing else that really needs to be done here, maybe clean up the
-    code.
-    
+1.  I fixed the construct function to NOT resave the file everytime.  Yay!
+2.  I added an autosave feature with an option to turn it off,but I want to know if there
+    are any other options or features I can add to this.  I don't feel that I am fully
+    done with this just yet.
