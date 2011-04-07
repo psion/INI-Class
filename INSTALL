@@ -4,7 +4,7 @@ it in your include directory.  Then from there, you can call it as a class.
 
 Class Name: parseINI(ini file name)
 
-Functions:
+Methods:
 
 parseArray(array[optional) -   Pass an array in the correct structure and it will structure
                                it into an INI file string.  If none is given, then the basic
@@ -14,5 +14,14 @@ parseString(string[optional) - Pass an INI file as a string through here and it 
 										 when the class was called will be parsed.
 saveINI(string[optional]) -	 This will save the INI string.  If no string is passed, then
 										 it will save the original INI string.
+iniopt(option,value) - 			 This takes the options listed below.  Each option is a constant
+									    with a default value.
+
+There is one option currently, and that is the autosave.  The system automaticly saves the
+modified INI string back to the original file.  Setting this option will override that.
+
+Option:
+INI_AUTOSAVE   1 - Autosave on (default)
+               2 - Autosave off
 										 
 The array structure is listed in the README file.  It should be easy from there.
