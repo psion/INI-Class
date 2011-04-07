@@ -1,5 +1,24 @@
 <?php
 
+/*  Copyright 2011 Jason Marshall
+
+    This file is part of INI-class.
+
+    INI-Class is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    INI-Class is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with INI-Class.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
 define('INI_AUTOSAVE',1); // 0 is not to save at the close of the class, 1 saves
 	//I really don't know of anywhere else to have an option.  but this is where I would put it.
 
