@@ -44,6 +44,7 @@ function __construct($file)
 		} else {
    $inistring=file_get_contents($file);
    $this->ini=trim(preg_replace('/(\s*[#;].*$)|(^\s*\n)/m', '', $inistring));
+   $x=$this->parseString();
       }
 }
 
@@ -51,33 +52,24 @@ function parseString($string = null)
 {
 	$this->ini_array = array();
 	if($string == null) { $string=$this->ini; }
-	$jones=preg_split('/\n/',$string);
-
-
-
-foreach($jones as $txt)
+	$jones=preg_split('/\n/is',$string);
+//print_r($jones);
+foreach ($jones as $txt)
 {
-	$c=preg_match_all ("/(\\[.*?\\])/is", $txt,$matches);
+	$c=preg_match("/(\\[.*?\\])/is", $txt,$matches);
   if($c)
   {
-
-
       $foo=preg_replace($pattern= "/(\\[)/is", $replacement = '', $txt);
 $section=preg_replace($pattern= "/(\\])/is", $replacement = '', $foo); 
-if(!isset($this->ini_array[$section])) { $this->ini_array[$section] = array(); }
-//echo $section."\n";    
+if(!isset($this->ini_array[$section])) { $this->ini_array[$section] = array(); }  
   } else {
     $janet=explode($delimiter='=', $txt, $limit = 2); // My Easter Egg.  I love Rocky Horror
     $colombia=trim($janet[0]);
     $riff=trim($janet[1]);
-    $this->ini_array[$section][$colombia]=$riff;
-
-  	}
-  	return $this->ini_array;
+    $this->ini_array[$section][$colombia]=$riff
+  	}  	
 }
-
-  
-  
+ return $this->ini_array;  
   }
   
   
@@ -96,14 +88,12 @@ function parseArray($array = null)
 			
 function saveINI($str = null)
 {
-	if($str == null) { $str=$this->ini; }
+	if($str == null) { $this->parseArray(); $str=$this->ini; }
 	file_put_contents($this->ini_file,$str);
 	}
 
 function iniopt($opt=null,$value=null)
 {
-	
-	
 	if($opt==null)
 	{
 		$this->ini_opt[1]=1;
