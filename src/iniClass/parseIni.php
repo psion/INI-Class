@@ -1,5 +1,7 @@
 <?php
 
+namespace iniClass
+
 /*  Copyright 2011 Jason Marshall
 
     This file is part of INI-class.
@@ -19,10 +21,10 @@
 
 */
 
-define('INI_AUTOSAVE',1); // 0 is not to save at the close of the class, 1 saves
+define('INI_AUTOSAVE',0); // 0 is not to save at the close of the class, 1 saves
 	//I really don't know of anywhere else to have an option.  but this is where I would put it.
 
-class parseINI
+class parseIni
 {
 
 	public $ini;		// The INI string, as a full string.  Comments and whitespace stripped.
