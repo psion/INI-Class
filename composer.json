@@ -1,0 +1,16 @@
+{
+    "name": "psion/ini-class",
+    "description": "INI Parser Library",
+    "authors": [
+        {
+            "name": "Jason Marshall",
+            "email": "psion1369@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=3.7"
+    }
+}
