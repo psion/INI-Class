@@ -24,3 +24,5 @@ The array will be set up as follows:
 				
 If you need a new INI file, just create an array with the setup above and pass it to the
 save ini function.
+
+[![tip for next commit](http://tip4commit.com/projects/148.svg)](http://tip4commit.com/projects/148)
